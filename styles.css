@@ -1,0 +1,188 @@
+/* Global Styles */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header Navigation */
+
+.header-nav {
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.header-nav-bar {
+  width: 100%;
+  padding: 2.5rem 0rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.nav-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+}
+
+.nav-heading:hover {
+  text-decoration: underline;
+}
+
+.header-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  margin: 0;
+  background-color: #000;
+  border-color: transparent;
+  border-width: 0px;
+}
+
+/* Home Page */
+
+.homepage-section {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.homepage-heading > h1 {
+  font-size: 2rem;
+  margin: 2.5rem 0 1rem;
+}
+
+.homepage-heading > em {
+  font-size: 1.5rem;
+}
+
+.homepage-section > p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.homepage-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 2rem auto;
+}
+
+/* About Page */
+
+.about-section {
+  margin: 2.5rem auto;
+  display: flex;
+  gap: 2.5rem;
+
+  @media (max-width: 600px) {
+    flex-wrap: wrap;
+  }
+}
+.bio-photo {
+  max-width: 400px;
+
+  @media (max-width: 600px) {
+    max-width: 100%;
+  }
+}
+
+/* Footer */
+.footer {
+  overflow: hidden;
+}
+
+.footer-content {
+  text-align: center;
+  font-size: 0.9rem;
+  color: gray;
+  margin: 2.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Portfolio Page */
+
+.portfolio-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2.5rem 0;
+}
+
+.portfolio-projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.portfolio-project {
+  display: flex;
+  gap: 2.5rem;
+
+  img {
+    max-width: 800px;
+
+    @media (max-width: 600px) {
+      max-width: 100%;
+    }
+  }
+}
+
+.portfolio-project:nth-child(even) {
+  flex-direction: row-reverse;
+}

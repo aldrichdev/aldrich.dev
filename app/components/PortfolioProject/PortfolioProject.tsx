@@ -1,34 +1,39 @@
-import { Button } from '@mui/material'
+import { Accordion, AccordionDetails, AccordionSummary, Button, Typography } from '@mui/material'
+import { PortfolioProjectType } from '../../types/PortfolioProjectType'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
-interface PortfolioProjectProps {
-  imageUrl: string
-  title: string
-  technologies: string
-  /** The project description. */
-  children: string
-  projectUrl?: string
-}
-
-/** A row displaying an image and text showcasing a project in the portfolio.
- * Note that parent styles alternate which side the image is on.
- */
-const PortfolioProject = (props: PortfolioProjectProps) => {
-  const { imageUrl, title, technologies, children, projectUrl } = props
+/** An accordion row which showcases a project in the portfolio. */
+const PortfolioProject = (props: PortfolioProjectType) => {
+  const { imageUrl, iconUrl, title, technologies, children, projectUrl } = props
 
   return (
-    <div className='portfolio-project'>
-      <img src={imageUrl} alt='' />
-      <div className='portfolio-details'>
-        <h2>{title}</h2>
-        <em>{technologies}</em>
-        <p>{children}</p>
-        {projectUrl && (
-          <Button variant='outlined' href={projectUrl} target='_blank' rel='noopener noreferrer'>
-            ➤ View project
-          </Button>
-        )}
-      </div>
-    </div>
+    <Accordion>
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon />}
+        aria-controls='panel1-content'
+        id='panel1-header'
+        className='portfolio-accordion-summary'
+      >
+        <img src={iconUrl} className='accordion-summary-icon' />
+        <Typography component='span' className='accordion-summary-text'>
+          <p className='accordion-summary-paragraph project-title'>{title}</p>
+          <p className='accordion-summary-paragraph project-technologies'>{technologies}</p>
+        </Typography>
+      </AccordionSummary>
+      <AccordionDetails>
+        <div className='portfolio-project'>
+          <img src={imageUrl} alt='' />
+          <div className='portfolio-details'>
+            <p>{children}</p>
+            {projectUrl && (
+              <Button variant='outlined' href={projectUrl} target='_blank' rel='noopener noreferrer'>
+                ➤ Visit site
+              </Button>
+            )}
+          </div>
+        </div>
+      </AccordionDetails>
+    </Accordion>
   )
 }
 

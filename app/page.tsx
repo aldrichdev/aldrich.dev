@@ -14,7 +14,7 @@ const HomePage = () => {
       </div>
       <img src='/images/Paul.jpg' className='homepage-avatar ' />
       <p>I am a web developer based out of Chicago, IL, with professional experience in the field since 2012.</p>
-      <Button variant='contained' color='primary' href='/portfolio' sx={{ margin: '2rem 0 2.5rem' }}>
+      <Button variant='contained' color='primary' href='/portfolio' sx={{ margin: '2rem 0 0' }}>
         Check Out My Work
       </Button>
     </section>

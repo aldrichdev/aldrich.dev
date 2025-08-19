@@ -1,7 +1,7 @@
 const FooterNavigation = () => {
   return (
     <footer className='footer'>
-      <hr className='divider' />
+      <hr className='divider footer-divider' />
       <div className='footer-content'>
         <span>&copy; {new Date().getFullYear()} Paul Aldrich</span>
         <div className='footer-links'>

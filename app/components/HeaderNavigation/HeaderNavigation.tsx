@@ -19,7 +19,7 @@ const HeaderNavigation = () => {
           </li>
         </ul>
       </div>
-      <hr className='divider' />
+      <hr className='divider header-divider' />
     </nav>
   )
 }

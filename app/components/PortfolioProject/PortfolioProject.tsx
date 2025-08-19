@@ -1,17 +1,25 @@
 import { Accordion, AccordionDetails, AccordionSummary, Button, Typography } from '@mui/material'
 import { PortfolioProjectType } from '../../types/PortfolioProjectType'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+import slugify from 'slugify'
+import { SyntheticEvent } from 'react'
+
+type PortfolioProjectProps = PortfolioProjectType & {
+  expandedProject: string | false
+  onProjectChange: (projectSlug: string) => (event: SyntheticEvent<Element, Event>, newExpanded: boolean) => void
+}
 
 /** An accordion row which showcases a project in the portfolio. */
-const PortfolioProject = (props: PortfolioProjectType) => {
-  const { imageUrl, iconUrl, title, technologies, children, projectUrl } = props
+const PortfolioProject = (props: PortfolioProjectProps) => {
+  const { imageUrl, iconUrl, title, technologies, children, projectUrl, expandedProject, onProjectChange } = props
+  const titleSlug = slugify(title, { lower: true })
 
   return (
-    <Accordion>
+    <Accordion expanded={expandedProject === titleSlug} onChange={onProjectChange(titleSlug)}>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
-        aria-controls='panel1-content'
-        id='panel1-header'
+        aria-controls={`${titleSlug}-content`}
+        id={`${titleSlug}-header`}
         className='portfolio-accordion-summary'
       >
         <img src={iconUrl} className='accordion-summary-icon' />

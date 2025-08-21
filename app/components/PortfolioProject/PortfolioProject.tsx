@@ -30,7 +30,7 @@ const PortfolioProject = (props: PortfolioProjectProps) => {
       </AccordionSummary>
       <AccordionDetails>
         <div className='portfolio-project'>
-          <img src={imageUrl} alt='' />
+          <img src={imageUrl} alt='' className='portfolio-project-image' />
           <div className='portfolio-details'>
             <p>{children}</p>
             {projectUrl && (

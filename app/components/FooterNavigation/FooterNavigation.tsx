@@ -8,6 +8,9 @@ const FooterNavigation = () => {
           <a href='https://www.linkedin.com/in/paul-aldrich-07a07116/' target='_blank' rel='noopener noreferrer'>
             <img src='/images/linkedin-icon-bw.png' alt='LinkedIn Icon' className='footer-icon' />
           </a>
+          <a href='https://github.com/aldrichdev' target='_blank' rel='noopener noreferrer'>
+            <img src='/images/github-icon.png' alt='GitHub Icon' className='footer-icon' />
+          </a>
         </div>
       </div>
     </footer>

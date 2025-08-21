@@ -75,9 +75,8 @@ a:hover {
   gap: 3rem;
 
   @media (max-width: 768px) {
-    flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
   }
 }
 
@@ -129,7 +128,7 @@ a:hover {
 /* About Page */
 
 .about-section {
-  margin: 2.5rem auto;
+  margin: 0 auto;
   display: flex;
   gap: 2.5rem;
 
@@ -145,6 +144,11 @@ a:hover {
   }
 }
 
+.about-portfolio-link {
+  text-decoration: underline;
+  color: blue;
+}
+
 /* Footer */
 .footer {
   overflow: hidden;
@@ -157,6 +161,11 @@ a:hover {
   margin: 2.5rem 0;
   display: flex;
   justify-content: space-between;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
 }
 
 .footer-icon {
@@ -178,18 +187,16 @@ a:hover {
 .portfolio-projects {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 30px;
+  row-gap: 2rem;
 }
 
 .portfolio-project {
   display: flex;
-  gap: 2.5rem;
+  column-gap: 2.5rem;
 
-  img {
-    max-width: 800px;
-
-    @media (max-width: 600px) {
-      max-width: 100%;
-    }
+  @media (max-width: 600px) {
+    flex-wrap: wrap;
   }
 }
 
@@ -199,6 +206,10 @@ a:hover {
   > .MuiAccordionSummary-content {
     align-items: center;
     column-gap: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    height: auto;
   }
 }
 
@@ -219,4 +230,12 @@ a:hover {
 .project-technologies {
   font-size: 16px;
   font-style: italic;
+}
+
+.portfolio-project-image {
+  max-width: 800px;
+
+  @media (max-width: 600px) {
+    max-width: 100%;
+  }
 }

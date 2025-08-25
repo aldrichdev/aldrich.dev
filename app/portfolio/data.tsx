@@ -34,7 +34,7 @@ export const portfolioProjects: PortfolioProjectType[] = [
     imageUrl: '/images/portfolio/media-network-site.png',
     iconUrl: '/images/nextjs-icon.png',
     title: 'FX Networks',
-    technologies: 'Next.js, React, TypeScript, SSR, Material UI, Styled Components, Graph QL',
+    technologies: 'Next.js, React, TypeScript, SSR, Material UI, Styled Components, GraphQL',
     children: (
       <>
         The FX Networks brand's web presence needed a redesign, and I was happy to be part of the team that took on this
@@ -63,7 +63,7 @@ export const portfolioProjects: PortfolioProjectType[] = [
     imageUrl: '/images/portfolio/time-trax.png',
     iconUrl: '/images/nextjs-icon.png',
     title: 'TimeTrax',
-    technologies: 'Next.js, React, Vercel, TypeScript, Supabase, PostgreSQL, Tailwind CSS, Resend',
+    technologies: 'Next.js, React, Vercel, TypeScript, Tailwind, Shadcn UI, Supabase, PostgreSQL',
     children: (
       <>
         How fast can we create a time-tracking website using AI? That question was the starting point for this internal

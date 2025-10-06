@@ -1,5 +1,5 @@
 const HeaderNavigation = () => (
-  <nav className='header-nav'>
+  <nav className='header-nav content-width'>
     <div className='header-nav-bar'>
       <a href='/' className='nav-heading'>
         aldrich.dev

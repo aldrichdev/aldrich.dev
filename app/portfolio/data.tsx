@@ -5,13 +5,13 @@ export const portfolioProjects: PortfolioProjectType[] = [
     imageUrl: '/images/portfolio/design-system-colors.png',
     iconUrl: '/images/storybook-icon.png',
     title: 'Alterra Design System',
-    technologies: 'Storybook, React, Material UI, Styled Components',
+    technologies: 'Storybook, React, TypeScript, Material UI, Styled Components',
     children: (
       <>
-        I ported the client's React components to Storybook and created a fully functional design system, including a
-        theme switcher and interactive documentation showcasing all of the brand's colors, fonts and typographies. The
-        company had many different websites and mobile apps that all needed to use the same graphics, components and
-        typographies, so the design system achieved all of their goals.
+        I ported the client's Sitecore Headless (JSS) React components to Storybook and created a fully functional
+        design system, including a theme switcher and interactive documentation showcasing all of the brand's colors,
+        fonts and typographies. The company had many different websites and mobile apps that all needed to use the same
+        graphics, components and typographies, so the design system achieved all of their goals.
       </>
     ),
     projectUrl: 'https://www.alterramtn.design/?path=/docs/foundation-getting-started--docs',
@@ -32,7 +32,7 @@ export const portfolioProjects: PortfolioProjectType[] = [
   },
   {
     imageUrl: '/images/portfolio/media-network-site.png',
-    iconUrl: '/images/nextjs-icon.png',
+    iconUrl: '/images/nextjs-icon-white.png',
     title: 'FX Networks',
     technologies: 'Next.js, React, TypeScript, SSR, Material UI, Styled Components, Graph QL',
     children: (
@@ -100,5 +100,21 @@ export const portfolioProjects: PortfolioProjectType[] = [
         experience.
       </>
     ),
+  },
+  {
+    imageUrl: '/images/portfolio/gaming-community.png',
+    iconUrl: '/images/nextjs-icon.png',
+    title: 'Gaming Community Site',
+    technologies: 'Next.js, React, TypeScript, Emotion, Styled Components, Material UI, API Security',
+    children: (
+      <>
+        The Neat F2P site is a personal project I created to help launch a gaming community. Using React and Next.js, it
+        features user authentication, news and event pages, player hiscores, and account management. I secured the
+        Next.js API routes through session cookie checks, and added ownership verfication for endpoints that dealt with
+        website or game account data. This prevented bad actors from calling these endpoints from an HTTP client such as
+        Postman and accessing private user data.
+      </>
+    ),
+    projectUrl: 'https://www.neatf2p.com',
   },
 ]

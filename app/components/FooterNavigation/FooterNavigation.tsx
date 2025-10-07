@@ -2,7 +2,7 @@ import { IconButton } from '@mui/material'
 
 const FooterNavigation = () => {
   return (
-    <footer className='footer content-width'>
+    <footer className='footer'>
       <hr className='divider footer-divider' />
       <div className='footer-content'>
         <span>&copy; {new Date().getFullYear()} Paul Aldrich</span>

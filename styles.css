@@ -9,6 +9,8 @@ main {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+  width: 80%;
+  margin: 0 auto;
   height: 100vh;
 }
 
@@ -26,12 +28,6 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-/** Use this to make content centered and 80% width which is typical for most content */
-.content-width {
-  width: 80%;
-  margin: 0 auto;
 }
 
 /* Header Navigation */
@@ -82,6 +78,12 @@ a:hover {
     align-items: center;
     gap: 2rem;
   }
+}
+
+.header-link-active {
+  color: red;
+  margin: 0;
+  line-height: normal;
 }
 
 .divider {
@@ -149,8 +151,11 @@ a:hover {
 }
 
 .about-portfolio-link {
-  text-decoration: underline;
   color: blue;
+}
+
+.about-portfolio-link:hover {
+  text-decoration: underline;
 }
 
 /* Footer */
@@ -194,46 +199,29 @@ a:hover {
   flex-wrap: wrap;
   margin-top: 30px;
   width: 100%;
+  gap: 50px;
 }
 
-.parallax-image {
-  min-height: 500px;
+.portfolio-image-gradient {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+
+.portfolio-image-container {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
   position: relative;
-  overflow: hidden; /* ensures blur edges don’t leak */
+  z-index: -1;
+  display: block;
 }
 
-.parallax-image::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: inherit;
-  z-index: 0;
-  margin: -10px;
-}
-
-.parallax-image-caption {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  padding: 16px;
-  font-weight: 600;
-  font-size: 20px;
-  background-color: #000;
-  z-index: 1; /* sits above the blurred bg */
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  align-items: center;
+.portfolio-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: all 0.3s ease;
+  display: block;
 }
 
 .project-info {
@@ -245,11 +233,18 @@ a:hover {
   text-align: center;
   padding: 40px;
   gap: 20px;
+
+  @media (min-width: 1200px) {
+    padding: 40px 240px;
+  }
 }
 
-.project-technology-icon {
-  width: 40px;
-  display: block;
+.project-title {
+  width: 100%;
+  color: white;
+  margin: 0;
+  font-size: 32px;
+  font-weight: 600;
 }
 
 .project-technologies {
@@ -264,7 +259,8 @@ a:hover {
   margin: 0;
 }
 
-.project-visit-button {
-  background-color: magenta;
-  color: black;
+/* Contact Page */
+
+.contact-section {
+  text-align: center;
 }

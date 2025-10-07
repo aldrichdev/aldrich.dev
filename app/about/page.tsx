@@ -6,8 +6,8 @@ export const metadata: Metadata = {
 
 const AboutPage = () => {
   return (
-    <section className='about-section content-width'>
-      <img src='/images/Paul2.jpg' className='bio-photo' alt='Paul Aldrich' />
+    <section className='about-section'>
+      <img src='/images/PaulLg.jpg' className='bio-photo' alt='Paul Aldrich' />
       <div>
         <h1>About Me</h1>
         <p>
@@ -19,7 +19,7 @@ const AboutPage = () => {
           Redux actions in a recent project at Mapleton Hill.
         </p>
         <p>
-          Beyond coding, I bring a passion for problem-solving and attention to detail. I enjoy writing clean,
+          Beyond coding, I have a passion for problem-solving and attention to detail. I enjoy writing clean,
           maintainable code and providing thoughtful feedback in code reviews. Mentoring other developers and writing
           clear documentation are also big parts of how I like to contribute to a team’s success. For me, building
           software that’s reliable, easy to maintain, and enjoyable for both developers and users alike is important.
